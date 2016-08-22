@@ -1,3 +1,8 @@
 <resources>
-  <string name="app_name">TDD_Geeknight_New</string>
+  <string name="app_name">ToDo_GeekNight</string>
+  <string name="title_activity_login">LoginActivity</string>
+  <string name="login">Login</string>
+  <string name="enter_password">Enter Password</string>
+  <string name="enter_email">Enter Email</string>
+  <string name="not_logged_in">Not Logged In</string>
 </resources>
