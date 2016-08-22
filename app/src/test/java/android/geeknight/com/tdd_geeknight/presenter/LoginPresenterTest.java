@@ -27,4 +27,18 @@ public class LoginPresenterTest {
     verify(view, times(1)).onLoginFailure();
   }
 
+  @Test
+  public void shouldNotifyViewForLoginSuccess() throws Exception {
+    String email = "gurgaon@thoughtworks.com";
+    String password = "$12345";
+    LoginValidator validator = mock(LoginValidator.class);
+    ILoginView view = mock(ILoginView.class);
+    when(validator.isValid(email, password)).thenReturn(true);
+
+    LoginPresenter loginController = new LoginPresenter(view, validator);
+
+    loginController.performLogin(email, password);
+
+    verify(view, times(1)).onLoginSuccess();
+  }
 }
