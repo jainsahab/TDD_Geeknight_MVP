@@ -13,6 +13,10 @@ public class LoginPresenter {
   }
 
   public void performLogin(String email, String password) {
-    view.onLoginFailure();
+    if (validator.isValid(email, password)) {
+      view.onLoginSuccess();
+    } else {
+      view.onLoginFailure();
+    }
   }
 }
